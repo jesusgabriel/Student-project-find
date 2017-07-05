@@ -1,0 +1,11 @@
+.highlight-students, .highlight-courses {
+  padding: .35rem .5rem;
+}
+
+.highlight-students {
+  background-color: #ffcc6f;
+}
+
+.highlight-courses {
+  background-color: #a8d4ef;
+}

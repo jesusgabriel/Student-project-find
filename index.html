@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://www.star.euclid.ed.ac.uk/javascript/uoe/uoe_master.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <title>Student List</title>
+</head>
+<body>
+
+  <br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <i class="fa fa-users"></i>
+            Students
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="row form-group">
+            <div class="col-sm-4">
+              <label>Academic Year</label>
+              <select class="form-control" name="academic-year">
+                <option value="">Any</option>
+                <option value="2015/6">2015/16</option>
+                <option value="2016/7">2016/17</option>
+              </select>
+            </div>
+            <div class="col-sm-6 col-sm-offset-2">
+              <label>School</label>
+              <select class="form-control" name="school">
+                <option value="">Any</option>
+                <option value="SU253">School of Mathematics</option>
+                <option value="SU152">Edinburgh College of Art</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-sm-8">
+              <label>Programme</label>
+              <input class="form-control" type="text" name="programme-code" placeholder="Any" />
+            </div>
+            <div class="col-sm-4">
+              <label>Year of programme</label>
+              <input class="form-control" type="number" name="year-of-programme" min="0" max="10" placeholder="Any" />
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-sm-6">
+              <label>Enrolled on course</label>
+              <input class="form-control" type="text" name="course-code" placeholder="Any" />
+            </div>
+          </div>
+
+          <hr class="dashed">
+
+          <div class="row form-group">
+            <div class="col-sm-8">
+              <label>Student codes</label>
+              <textarea class="form-control" name="student-codes"></textarea>
+              <small>Separate student codes with commas</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <i class="fa fa-book"></i>
+            Courses
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="row form-group">
+            <div class="col-sm-6">
+              <label>Course list</label>
+              <div>
+                <em>All courses</em>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label>Add course</label>
+              <div class="input-group">
+                <input class="form-control" type="text" name="course-codes" />
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h2 class="h3 page-header" style="margin-top: 0;">Update enrolment statuses</h2>
+
+      <div class="alert alert-info">
+        Select search criteria to find the students and courses you want to update. You can further filter the results afterwards.
+      </div>
+
+      <p class="form-group" style="line-height:2;">Find <span class="highlight-students" id="student-query">all students</span> on <span class="highlight-courses" id="course-query">all courses</span>.</p>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary">
+          <i class="fa fa-search"></i>
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<source src="main.js" >
+</html>
